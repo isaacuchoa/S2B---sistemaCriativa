@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tarefas>
+  <tarefa>
+  <id>#1125</id>
+  <titulo>Instalar SQL Server</titulo>
+  <status>Iniciada</status>
+  <prioridade>Alta</prioridade>
+  <progresso>67%</progresso>
+  </tarefa>
+  <tarefa>
+  <id>#1135</id>
+  <titulo>Desenvolver Módulo em C#</titulo>
+  <status>Iniciada</status>
+  <prioridade>Alta</prioridade>
+  <progresso>89%</progresso>
+  </tarefa>
+  <tarefa>
+  <id>#3122</id>
+  <titulo>Desinstalar SQL Server</titulo>
+  <status>A fazer</status>
+  <prioridade>Baixa</prioridade>
+  <progresso>0%</progresso>
+  </tarefa>
+</tarefas>

@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="Estilo.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .mainMenu
+        {
+            width: 175px;
+            height: 83px;
+        }
+        .style2
+        {
+            height: 78px;
+        }
+        .style3
+        {
+            height: 274px;
+            width: 1119px;
+        }
+        .style4
+        {
+            height: 274px;
+            }
+        .style7
+        {
+            width: 749px;
+        }
+        .style9
+        {
+            width: 59px;
+        }
+        .style10
+        {
+            width: 194px;
+        }
+        </style>
+</head>
+<body class="Master" >
+    <div class="painel">
+    <form id="form1" runat="server" class="painel">
+        <table style="width:100%;">
+            <tr>
+                <td class="style2" colspan="2" style="vertical-align: top">
+                    <table cellpadding="0" cellspacing="0" style="width:100%; font-size:8pt">
+                        <tr>
+                            <td class="style7" style="text-align: right">
+                                Olá <b><%=Session["Nome"]%></b></td>
+                            <td style="text-align:right; padding-right:5px; vertical-align:middle" 
+                                class="style10">
+                                Última Visita: <%=Session["Ultimo_Acesso"]%>
+                                </td>
+                            <td class="style9" style="text-align:right">
+                                <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click" 
+                                    Font-Underline="False">LogOut</asp:LinkButton>
+                                &nbsp;&nbsp;
+                                </td>
+                        </tr>
+                        </table>
+                    <img alt="projetos" src="images/BarraSuperior.gif" 
+                        style="width: 943px; height: 63px" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="vertical-align: top; background-color: #E0E0E0;">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" 
+                        Font-Size="0.8em" PathSeparator=" : ">
+                        <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                        <CurrentNodeStyle ForeColor="#333333" />
+                        <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+                        <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                    </asp:SiteMapPath>
+                    </td>
+            </tr>
+            <tr>
+                <td class="style4"                          
+                    style="vertical-align: top">
+                    <table style="width:68%;">
+                        <tr>
+                            <td>
+                                <img alt="Opções" src="images/barra_menu_options.gif" 
+                                    style="width: 130px; height: 24px" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="main.aspx" class="linkMenu">Minhas Tarefas</a><br />
+                                 <a href="" class="linkMenu">Documentos</a><br />
+                                 <a href="" class="linkMenu">Minhas Mensagens</a><br />
+                                 <a href="" class="linkMenu">Opção 1</a><br />
+                                 <a href="" class="linkMenu">Opção 1</a><br />
+                                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="linkMenu">LinkButton</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="Relatórios" src="images/barra_menu_reports.gif" 
+                                    style="width: 130px; height: 24px" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+  
+                                 <a href="" class="linkMenu">Relatório 1</a><br />
+                                 <a href="" class="linkMenu">Relatório 1</a><br />
+                                 <a href="" class="linkMenu">Relatório 1</a><br />
+                                 <a href="" class="linkMenu">Relatório 1</a><br />
+                                 <a href="" class="linkMenu">Relatório 1</a></td>
+                        </tr>
+                        </table>
+                        <%if ( (bool) Session["Admin"] == true) { %>
+                        <table style="width:68%;">
+                        <tr>
+                            <td>
+                                <img alt="Gerenciamento" src="images/barra_menu_gerenciamento.gif" 
+                                    style="width: 130px; height: 24px" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="projList.aspx" title="Ver Projetos" class="linkMenu">Projetos</a><br />
+                                <a class="linkMenu" href="userList.aspx" title="Ver Usuários">Usuários</a><br />
+                                <a href="requests.aspx" title="Criar/Editar Solicitações" class="linkMenu">Solicitações</a>
+                                </td>
+                        </tr>
+                    </table>
+                        <%}%>
+                 </td>
+                <td class="style3" style="vertical-align:top">
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+         
+        
+        </asp:ContentPlaceHolder>
+
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    </div>
+ 
+
+<div class="logo">
+    <img alt="Logo Criativa" src="images/logo_criativa_inferior.gif" 
+        style="width: 473px; height: 35px" /></div>
+ 
+
+</body>
+</html>

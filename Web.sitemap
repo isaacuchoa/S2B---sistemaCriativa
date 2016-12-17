@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Default.aspx" title="Página de Login"  description="">
+        <siteMapNode url="main.aspx" title="Meu Painel"  description="" >
+             <siteMapNode url="projList.aspx" title="Lista de Projetos"  description="" >
+                <siteMapNode url="projAdd.aspx" title="Adicionar um Novo Projeto"  description="" />
+                <siteMapNode url="projEdit.aspx" title="Editar Projeto"  description="" />
+             </siteMapNode>
+                <siteMapNode url="userList.aspx" title="Lista de Usuários"  description="" >
+                </siteMapNode>
+             <siteMapNode url="requests.aspx" title="Solicitações"  description="" />
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>
